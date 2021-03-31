@@ -1,0 +1,22 @@
+int InsertBefore (list* p_lst, int before_which, elem_t val)
+{
+    if (before_which == p_lst->head)
+        return InsertHead (p_lst, val);
+
+    NEXT[PREV[before_which]] = p_lst->head_free;
+    NEXT[p_lst->head_free] = before_which;
+
+    PREV[before_which] = p_lst->head_free;
+    PREV[p_lst->head_free] = PREV[before_which];
+
+    DATA[p_lst->head_free] = val;
+
+    p_lst->now_size++;
+
+    int phys = p_lst->head_free;
+
+    if (NEXT[p_lst->head_free] != 0)
+        p_lst->head_free = NEXT[p_lst->head_free];
+
+    return phys;
+}

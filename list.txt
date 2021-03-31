@@ -1,0 +1,25 @@
+digraph G{
+	subgraph list{
+		rankdir=LR;
+		Model [shape=record,label="{{<0>} | {ElemPointer:\n001B4268 | {PhysPosition:\n0 | Data:\n-666 | Next:\n0 | <prev0>Prev:\n-1}}} |
+				{{<1>} | {ElemPointer:\n001B426C | {PhysPosition:\n1 | Data:\n1337 | Next:\n3 | <prev1>Prev:\n2}}} |
+				{{<2>} | {ElemPointer:\n001B4270 | {PhysPosition:\n2 | Data:\n-666 | Next:\n7 | <prev2>Prev:\n0}}} |
+				{{<3>} | {ElemPointer:\n001B4274 | {PhysPosition:\n3 | Data:\n12 | Next:\n4 | <prev3>Prev:\n1}}} |
+				{{<4>} | {ElemPointer:\n001B4278 | {PhysPosition:\n4 | Data:\n300 | Next:\n5 | <prev4>Prev:\n3}}} |
+				{{<5>} | {ElemPointer:\n001B427C | {PhysPosition:\n5 | Data:\n60 | Next:\n6 | <prev5>Prev:\n4}}} |
+				{{<6>} | {ElemPointer:\n001B4280 | {PhysPosition:\n6 | Data:\n70 | Next:\n0 | <prev6>Prev:\n5}}} |
+				{{<7>} | {ElemPointer:\n001B4284 | {PhysPosition:\n7 | Data:\n-666 | Next:\n8 | <prev7>Prev:\n-1}}} |
+				{{<8>} | {ElemPointer:\n001B4288 | {PhysPosition:\n8 | Data:\n-666 | Next:\n9 | <prev8>Prev:\n-1}}} |
+				{{<9>} | {ElemPointer:\n001B428C | {PhysPosition:\n9 | Data:\n-666 | Next:\n0 | <prev9>Prev:\n-1}}} |
+				"];
+	}
+Model:<1>->Model:<3>[color="blue";style="bold"]
+Model:<3>->Model:<4>[color="blue";style="bold"]
+Model:<4>->Model:<5>[color="blue";style="bold"]
+Model:<5>->Model:<6>[color="blue";style="bold"]
+Model:<6>->Model:<0>[color="blue";style="bold"]
+Model:<prev2>->Model:<prev7>[color="pink";style="bold"]
+Model:<prev7>->Model:<prev8>[color="pink";style="bold"]
+Model:<prev8>->Model:<prev9>[color="pink";style="bold"]
+Model:<prev9>->Model:<prev0>[color="pink";style="bold"]
+}
